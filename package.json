@@ -1,0 +1,26 @@
+{
+  "name": "complete-crud",
+  "version": "1.0.0",
+  "description": "A CLI generator for Express + MongoDB CRUD apps",
+  "main": "index.js",
+  "type": "module",
+  "bin": {
+    "complete-crud": "./bin/index.js"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [
+    "express",
+    "crud",
+    "generator",
+    "cli"
+  ],
+  "author": "Ghulam Qadir <mohammadghulam.qadir@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^5.4.1",
+    "fs-extra": "^11.3.0",
+    "inquirer": "^12.5.2"
+  }
+}
