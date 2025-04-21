@@ -25,6 +25,8 @@
   },
   "files": [
     "bin/",
+    "cli/",
+    "generator/",
     "index.js",
     "README.md"
   ],
