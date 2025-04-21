@@ -1,7 +1,7 @@
-import inquirer from 'inquirer';
-import chalk from 'chalk';
+const inquirer = require('inquirer');
+const chalk = require('chalk');
 
-export async function runPrompts() {
+async function runPrompts() {
     const { useCrud } = await inquirer.prompt([
         {
             type: 'confirm',
@@ -40,3 +40,5 @@ export async function runPrompts() {
 
     return { fields, useCrud };
 }
+
+module.exports = { runPrompts };

@@ -1,16 +1,16 @@
-import fs from 'fs-extra';
-import path from 'path';
+const fs = require('fs-extra');
+const path = require('path');
 
-import { generateModel } from './generateModel.js';
-import { generateController } from './generateController.js';
-import { generateRoute } from './generateRoute.js';
-import { generateDB } from './generateDB.js';
-import { generateApp } from './generateApp.js';
-import { generateServer } from './generateServer.js';
-import { generatePackageJson } from './generatePackageJson.js';
-import { generateEnv } from './generateEnv.js';
+const { generateModel } = require('./generateModel.js');
+const { generateController } = require('./generateController.js');
+const { generateRoute } = require('./generateRoute.js');
+const { generateDB } = require('./generateDB.js');
+const { generateApp } = require('./generateApp.js');
+const { generateServer } = require('./generateServer.js');
+const { generatePackageJson } = require('./generatePackageJson.js');
+const { generateEnv } = require('./generateEnv.js');
 
-export async function generateProject(projectPath, fields) {
+async function generateProject(projectPath, fields) {
 
     const dirs = ['controllers', 'models', 'routes', 'utils'];
     for (const dir of dirs) {
@@ -26,3 +26,5 @@ export async function generateProject(projectPath, fields) {
     await generateApp(projectPath);
     await generateServer(projectPath);
 }
+
+module.exports = { generateProject };

@@ -1,8 +1,8 @@
-import fs from 'fs-extra';
-import path from 'path';
+const fs = require('fs-extra');
+const path = require('path');
 
-export async function generateRoute(projectPath) {
-    const content = `
+async function generateRoute(projectPath) {
+  const content = `
 import express from 'express';
 import {
   createItem,
@@ -23,5 +23,7 @@ router.delete('/:id', deleteItem);
 export default router;
   `.trim();
 
-    await fs.writeFile(path.join(projectPath, 'routes', 'item.routes.js'), content);
+  await fs.writeFile(path.join(projectPath, 'routes', 'item.routes.js'), content);
 }
+
+module.exports = { generateRoute };
