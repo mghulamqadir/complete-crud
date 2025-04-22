@@ -1,6 +1,6 @@
 {
   "name": "complete-crud",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A CLI generator for Express + MongoDB CRUD apps",
   "main": "index.js",
   "bin": {
@@ -10,7 +10,9 @@
     "url": "https://github.com/mghulamqadir/complete-crud/issues"
   },
   "homepage": "https://github.com/mghulamqadir/complete-crud#readme",
-  "publishConfig": { "access": "public" },
+  "publishConfig": {
+    "access": "public"
+  },
   "keywords": [
     "express",
     "crud",
