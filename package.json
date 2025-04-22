@@ -6,9 +6,11 @@
   "bin": {
     "complete-crud": "./bin/index.js"
   },
-  "publishConfig": {
-    "access": "public"
+  "bugs": {
+    "url": "https://github.com/mghulamqadir/complete-crud/issues"
   },
+  "homepage": "https://github.com/mghulamqadir/complete-crud#readme",
+  "publishConfig": { "access": "public" },
   "keywords": [
     "express",
     "crud",
@@ -20,20 +22,19 @@
   "dependencies": {
     "chalk": "^5.4.1",
     "fs-extra": "^11.3.0",
-    "inquirer": "^12.5.2"
+    "inquirer": "^10.2.2"
   },
   "files": [
     "bin/",
     "cli/",
     "generator/",
-    "index.js",
-    "README.md"
+    "readMe.md"
   ],
   "repository": {
     "type": "git",
     "url": "https://github.com/mghulamqadir/complete-crud.git"
   },
   "engines": {
-    "node": ">=14.0.0"
+    "node": ">=18.0.0"
   }
 }

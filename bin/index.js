@@ -1,7 +1,12 @@
+#!/usr/bin/env node
 const { runPrompts } = require('../cli/prompts.js');
 const { generateProject } = require('../generator/index.js');
 const chalk = require('chalk');
 const path = require('path');
+const { fileURLToPath } = require('url');
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 console.log(chalk.green.bold('\n Express CRUD Generator'));
 
