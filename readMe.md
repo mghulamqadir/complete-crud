@@ -119,16 +119,3 @@ Please ensure your code follows the existing style and includes appropriate test
 
 This project is licensed under the ISC License. See the `LICENSE` file for more information.
 ```
-
-### Instructions
-1. Copy the above snippet.
-2. Paste it into a `README.md` file at the root of your project.
-3. Commit and push the file to your repository:
-   ```bash
-   git add README.md
-   git commit -m "Add README.md"
-   git push origin main
-   ```
-4. Verify that the `README.md` is included in the `files` field of your `package.json` (it already is, as per your provided `package.json`).
-
-If you need additional sections (e.g., troubleshooting, examples, or badges) or have specific customizations in mind, let me know!
