@@ -1,7 +1,7 @@
-const fs = require('fs-extra');
-const path = require('path');
+import fs  from 'fs-extra';
+import path  from 'path';
 
-async function generatePackageJson(projectPath) {
+export async function generatePackageJson(projectPath) {
     const pkg = {
         name: path.basename(projectPath),
         version: "1.0.0",
@@ -27,5 +27,3 @@ async function generatePackageJson(projectPath) {
     const json = JSON.stringify(pkg, null, 2) + "\n";
     await fs.writeFile(path.join(projectPath, "package.json"), json);
 }
-
-module.exports = { generatePackageJson };

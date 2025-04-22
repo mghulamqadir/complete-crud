@@ -1,7 +1,7 @@
-const fs = require('fs-extra');
-const path = require('path');
+import fs  from 'fs-extra';
+import path  from 'path';
 
-async function generateRoute(projectPath) {
+export async function generateRoute(projectPath) {
   const content = `
 import express from 'express';
 import {
@@ -25,5 +25,3 @@ export default router;
 
   await fs.writeFile(path.join(projectPath, 'routes', 'item.routes.js'), content);
 }
-
-module.exports = { generateRoute };

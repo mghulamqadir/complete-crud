@@ -1,7 +1,7 @@
-const fs = require('fs-extra');
-const path = require('path');
+import fs  from 'fs-extra';
+import path  from 'path';
 
-async function generateDB(projectPath) {
+export async function generateDB(projectPath) {
   const content = `
 import mongoose from 'mongoose';
 
@@ -20,5 +20,3 @@ export default connectDB;
 
   await fs.writeFile(path.join(projectPath, 'utils', 'db.js'), content);
 }
-
-module.exports = { generateDB };

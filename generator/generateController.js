@@ -1,7 +1,7 @@
-const fs = require('fs-extra');
-const path = require('path');
+import fs  from 'fs-extra';
+import path  from 'path';
 
-async function generateController(projectPath) {
+export async function generateController(projectPath) {
   const content = `
 import Item from '../models/Item.model.js';
 
@@ -54,5 +54,3 @@ export const deleteItem = async (req, res) => {
 
   await fs.writeFile(path.join(projectPath, 'controllers', 'item.controller.js'), content);
 }
-
-module.exports = { generateController };

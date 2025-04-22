@@ -1,7 +1,7 @@
-const fs = require('fs-extra');
-const path = require('path');
+import fs  from 'fs-extra';
+import path  from 'path';
 
-async function generateServer(projectPath) {
+export async function generateServer(projectPath) {
   const content = `
 import dotenv from 'dotenv';
 dotenv.config();
@@ -21,5 +21,3 @@ app.listen(PORT, () => {
   await fs.writeFile(target, content);
   await fs.chmod(target, 0o755);
 }
-
-module.exports = { generateServer };

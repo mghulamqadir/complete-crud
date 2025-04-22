@@ -1,7 +1,7 @@
-const fs = require('fs-extra');
-const path = require('path');
+import fs from 'fs-extra';
+import path from 'path';
 
-async function generateApp(projectPath) {
+export async function generateApp(projectPath) {
     const content = `
 import express from 'express';
 import itemRoutes from './routes/itemRoutes.js';
@@ -16,4 +16,3 @@ export default app;
 
     await fs.writeFile(path.join(projectPath, 'app.js'), content);
 }
-module.exports = { generateApp };

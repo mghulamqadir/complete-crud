@@ -3,6 +3,7 @@
   "version": "1.0.1",
   "description": "A CLI generator for Express + MongoDB CRUD apps",
   "main": "index.js",
+  "type": "module",
   "bin": {
     "complete-crud": "./bin/index.js"
   },

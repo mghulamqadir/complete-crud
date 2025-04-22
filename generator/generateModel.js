@@ -1,11 +1,11 @@
-const fs = require('fs-extra');
-const path = require('path');
+import fs  from 'fs-extra';
+import path  from 'path';
 
 function getSchema(fields) {
     return fields.map(f => `  ${f}: { type: String, required: true },`).join('\n');
 }
 
-async function generateModel(projectPath, fields) {
+export async function generateModel(projectPath, fields) {
     const content = `
 import mongoose from 'mongoose';
 
@@ -18,5 +18,3 @@ export default mongoose.model('Item', itemSchema);
 
     await fs.writeFile(path.join(projectPath, 'models', 'Item.model.js'), content);
 }
-
-module.exports = { generateModel };
