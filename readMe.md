@@ -1,6 +1,3 @@
-Below is the `README.md` content for your `complete-crud` npm package, formatted as a code snippet for easy copying and pasting into your project:
-
-```markdown
 # Complete CRUD
 
 A CLI tool to generate Express + MongoDB CRUD applications with a single command.
@@ -118,4 +115,3 @@ Please ensure your code follows the existing style and includes appropriate test
 ## License
 
 This project is licensed under the ISC License. See the `LICENSE` file for more information.
-```
